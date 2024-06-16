@@ -2,15 +2,10 @@
 name: "Build and Push Container Image"
 
 on:
-  workflow_run:
-    workflows: ["Unit Test Cases"]
-    types:
-      - completed
-
   push:
     branches: [main, dev]
 env:
-  IMAGE_NAME: myurlapi
+  IMAGE_NAME: myurlapp
 
 jobs:
   # This pushes the image to GitHub Packages.
