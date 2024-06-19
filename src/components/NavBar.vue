@@ -108,7 +108,7 @@ export default {
     const fetchUsername = async () => {
       if (auth0.isAuthenticated.value) { // Check if the user is authenticated
         const accessToken = await auth0.getAccessTokenSilently();
-        const response = await fetch("http://localhost:5005/users/me", {
+        const response = await fetch("/api/users/me", {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
