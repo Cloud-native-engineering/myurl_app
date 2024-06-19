@@ -22,15 +22,13 @@ app
   .use(createRouter(app))
   .use(
     createAuth0({
-      domain: import.meta.env.VITE_AUTH0_DOMAIN,
-      clientId: import.meta.env.VITE_AUTH0_CLIENT_ID,
-      useRefreshTokens: true,
-      cacheLocation: 'localstorage',
+      domain: authConfig.domain,
+      clientId: authConfig.clientId,
       authorizationParams: {
-        audience: import.meta.env.VITE_AUTH0_AUDIENCE,
         redirect_uri: window.location.origin,
-      },
+        audience: authConfig.authorizationParams.audience,
+      }
     })
-  ) 
+  )
   .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");

@@ -2,6 +2,6 @@
   "domain": "itcne.eu.auth0.com",
   "clientId": "K4201lnpuvDid2mO5aBUVJp6SBIIKY4p",
   "authorizationParams": {
-    "audience": "https://localhost:5005"
+    "audience": "https://api.wlankabel.ch"
   }
 }
