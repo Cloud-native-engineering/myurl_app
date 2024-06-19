@@ -287,7 +287,7 @@ export default {
     async function updateUrl(url_id, updatedData) {
       const accessToken = await auth0.getAccessTokenSilently();
       try {
-        const response = await fetch(`/api/urls/${url_id}/`, {
+        const response = await fetch(`/api/urls/${url_id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -311,7 +311,7 @@ export default {
     async function deleteUrl(url_id) {
       const accessToken = await auth0.getAccessTokenSilently();
       try {
-        await fetch(`/api/urls/${url_id}/`, {
+        await fetch(`/api/urls/${url_id}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${accessToken}`,
