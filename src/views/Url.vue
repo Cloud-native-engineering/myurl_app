@@ -327,7 +327,7 @@ export default {
       const accessToken = await auth0.getAccessTokenSilently();
       try {
         const response = await fetch(
-          `/api/urls/${url_id}/share/`,
+          `/api/urls/${url_id}/share`,
           {
             method: "POST",
             headers: {
