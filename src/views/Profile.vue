@@ -41,7 +41,7 @@ export default {
     async function callApi() {
       const accessToken = await auth0.getAccessTokenSilently();
       try {
-        const response = await fetch("/api/users/me/", {
+        const response = await fetch("/api/users/me", {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
