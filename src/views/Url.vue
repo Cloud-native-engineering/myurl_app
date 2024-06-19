@@ -272,7 +272,7 @@ export default {
     async function callApi() {
       const accessToken = await auth0.getAccessTokenSilently();
       try {
-        const response = await fetch("http://localhost:5005/urls", {
+        const response = await fetch("/api/urls", {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -287,7 +287,7 @@ export default {
     async function updateUrl(url_id, updatedData) {
       const accessToken = await auth0.getAccessTokenSilently();
       try {
-        const response = await fetch(`http://localhost:5005/urls/${url_id}`, {
+        const response = await fetch(`/api/urls/${url_id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -311,7 +311,7 @@ export default {
     async function deleteUrl(url_id) {
       const accessToken = await auth0.getAccessTokenSilently();
       try {
-        await fetch(`http://localhost:5005/urls/${url_id}`, {
+        await fetch(`/api/urls/${url_id}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -327,7 +327,7 @@ export default {
       const accessToken = await auth0.getAccessTokenSilently();
       try {
         const response = await fetch(
-          `http://localhost:5005/urls/${url_id}/share`,
+          `/api/urls/${url_id}/share`,
           {
             method: "POST",
             headers: {
@@ -353,7 +353,7 @@ export default {
     async function addUrl(item) {
       try {
         const accessToken = await auth0.getAccessTokenSilently();
-        const response = await fetch(`http://localhost:5005/urls`, {
+        const response = await fetch(`/api/urls`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
