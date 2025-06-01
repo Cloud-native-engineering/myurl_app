@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: myurl-app
+  description: A single-page application (SPA) for URL management
+spec:
+  type: website
+  system: myurl
+  lifecycle: production
+  owner: myurl-dev
+  providesApis: []
+  consumesApis:
+    - myurl-api
