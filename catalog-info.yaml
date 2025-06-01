@@ -3,6 +3,10 @@ kind: Component
 metadata:
   name: myurl-app
   description: A single-page application (SPA) for URL management
+  links:
+    - url: https://github.com/Cloud-native-engineering/myurl_app
+      title: GitHub Repository
+      icon: github
 spec:
   type: website
   system: myurl
